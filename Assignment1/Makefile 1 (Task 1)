@@ -1,0 +1,13 @@
+all: SKJ1
+
+SKJ1: SKJ1.cpp
+		g++ -o SKJ1 SKJ1.cpp
+
+dump: SKJ1
+		objdump -d SKJ1.exe > SKJ1.asm
+
+clean:
+		del SKJ1 SKJ1.asm
+
+run: SKJ1
+		./SKJ1
