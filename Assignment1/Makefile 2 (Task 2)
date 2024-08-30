@@ -1,0 +1,13 @@
+all: Perkalian
+
+Perkalian: Perkalian.cpp
+		g++ -o Perkalian Perkalian.cpp
+
+dump: Perkalian
+		objdump -d Perkalian.exe > Perkalian.asm
+
+clean:
+		del Perkalian Perkalian.asm
+
+run: Perkalian
+		./Perkalian
